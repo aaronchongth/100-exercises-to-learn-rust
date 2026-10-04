@@ -10,6 +10,18 @@
 //
 // Use only what you learned! No loops yet, so you'll have to use recursion!
 
+fn factorial(n: u32) -> u32 {
+    if n == 0 {
+        return 1;
+    }
+
+    let mut result: u32 = n;
+    if n > 1 {
+        result *= factorial(n - 1);
+    }
+    result
+}
+
 #[cfg(test)]
 mod tests {
     use crate::factorial;
